@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.main-container{
+    background-color: #2E2D4D;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.todoapp{
+    height: 50%;
+    background-color: white;
+    width: 50%;
+    border-radius: 20px;
+    /* overflow: auto; */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.inputdiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+/* position: sticky; */
+}
+.inputdiv img{
+    width: 50px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+}
+.inputdiv input{
+    width: 500px;
+    height: 45px;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: #465362;
+    color: white;
+    text-transform: capitalize;
+}
+.inputdiv input::placeholder{
+    color: white;
+}
+.inputdiv button{
+    width: 100px;
+    height: 45px;
+    line-height: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background-color: #ed254e;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.itemsdiv{
+    position: relative;
+    left: 20px;
+    top: 20px;
+
+}
+.itemsdiv ul{
+    display: block;
+
+}
+.itemsdiv ul li{
+    list-style-type: none;
+    color: black;
+    text-transform: capitalize;
+    font-size: 20px;
+    width: 700px;
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 50px;
+    text-align: left;
+    line-height: 50px;
+    padding-left: 50px;
+    background-color: #898B85;
+    position: relative;
+}
+.itemsdiv ul li::before{
+        content: '';
+        background-image: url(./assests/unchecked.png);
+        position: absolute;
+        left: 8px;
+        top: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 28px;
+        height: 28px;
+        font-size: 20px;
+    }
+.itemsdiv ul .checked{
+    color: white;
+    text-decoration: line-through;
+}
+.itemsdiv ul .checked::before{
+    content: '';
+    background-image: url(./assests/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+
+}
+ul li span:hover{
+    /* background-color: #575A4B; */
+    cursor: pointer;
+}
